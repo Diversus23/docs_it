@@ -5,7 +5,7 @@ icon: file
 
 # При использовании IIS в 1С получаем ошибку HttpException (0x80004005)
 
-## Ошибка примерно такая:
+## Ошибка примерно такая
 
 ```
 [HttpException (0x80004005): Обнаружено потенциально опасное значение Request.Path, полученное от клиента (:).]
@@ -13,7 +13,8 @@ System.Web.HttpRequest.ValidateInputIfRequiredByConfig() +9914812
 System.Web.PipelineStepManager.ValidateHelper(HttpContext context) +53
 ```
 
-**Алгоритм следующий:** 
+**Алгоритм следующий:**
+
 1. Открываем IIS.
 2. Открываем наш сайт-публикацию в браузере.
 3. Идем в сопоставления обработчиков.
@@ -25,4 +26,3 @@ System.Web.PipelineStepManager.ValidateHelper(HttpContext context) +53
 Если это не поможет, то можно попробовать следующее:
 
 ![01_Ошибка](static/01_Ошибка.png)
-
